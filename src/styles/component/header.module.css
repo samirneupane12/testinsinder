@@ -241,7 +241,7 @@
 /* Trend */
 
 .TrendContainer {
-  background-color: #0c0c11;
+  background-color: #101010;
   width: 100%;
   height: 55px;
   display: flex;
@@ -253,7 +253,7 @@
   padding-left: 10px;
   position: relative;
   z-index: 100;
-  background-color: #0c0c11;
+  background-color: #101010;
   padding-right: 10px;
   height: 100%;
 }
