@@ -18,7 +18,7 @@ const Main = () => {
   }, []);
   return (
     <>
-      <title>BRC-20 Insider - Live Index site for BRC-20 technology.</title>
+      <title>BRC-20 INSIDER® - Live Index site for BRC-20 technology.</title>
       <meta
         name="description"
         content="Live Index site for BRC-20 technology. See the live price, chart, Marketcap of BRC-20 Tokens."
