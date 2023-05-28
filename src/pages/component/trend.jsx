@@ -32,6 +32,7 @@ function Trend() {
               {data.map((el, index) => {
                 return (
                   <a
+                   key={index}
                     href={`/coin/${el.Name}?utm_source=WebsiteTrend&utm_medium=trend_web&utm_campaign=hottoken`}
                   >
                     <span key={index}>
