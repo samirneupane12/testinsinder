@@ -42,7 +42,7 @@ function Trend() {
                       {el.Name}{" "}
                       <h5
                         style={{
-                          color: Number(el.change) > 0 ? "#e73842" : "#19d98b",
+                          color: Number(el.changes) > 0 ? "#e73842" : "#19d98b",
                         }}
                         className={style.change_trend}
                       >
