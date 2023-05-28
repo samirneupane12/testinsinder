@@ -46,7 +46,7 @@ function Header() {
       <link
         rel="icon"
         type="image/x-icon"
-        href="https://brc20insider.com/logo/logo.png"
+        href="https://brc20insider.com/logo.png"
       />
 
       <div className={style.navmain}>
