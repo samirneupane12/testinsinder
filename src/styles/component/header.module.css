@@ -321,7 +321,7 @@
 
 @keyframes scrollText {
   0% {
-    transform: translatex(100%);
+    transform: translatex(70%);
   }
   100% {
     transform: translatex(-100%);
