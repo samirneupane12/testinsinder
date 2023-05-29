@@ -9,16 +9,43 @@ import Banner from "./component/banner.js";
 
 const Main = () => {
   const [data, setdata] = useState(null);
+  const [newdata, setnewdata] = useState(null);
   useEffect(() => {
-    async function getData() {
+    async function getData(Isnew) {
       const Tokens = await GetBRC20();
-      setdata(Tokens);
+      Isnew === false ? setdata(Tokens) : setnewdata(Tokens);
     }
-    getData();
+    getData(false);
+    setInterval(() => {
+      getData(true);
+    }, 30000);
   }, []);
+
+  function getColor(index) {
+    try {
+      const OldPrice = data.MarketCapDesc[index].PriceUSD;
+      const New = newdata.MarketCapDesc[index].PriceUSD;
+
+      if (Number(OldPrice) > Number(New)) {
+        return "#e73842";
+      } else if (Number(OldPrice) < Number(New)) {
+        return "#19d98b ";
+      } else {
+        return "";
+      }
+    } catch (error) {
+      return "";
+    }
+  }
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (newdata !== null && newdata) setdata(newdata);
+    }, 2000);
+  }, [newdata]);
   return (
     <>
-      <title>BRC-20 INSIDER® - Live Index site for BRC-20 technology.</title>
+      <title>BRC-20 Insider - Live Index site for BRC-20 technology.</title>
       <meta
         name="description"
         content="Live Index site for BRC-20 technology. See the live price, chart, Marketcap of BRC-20 Tokens."
@@ -72,7 +99,13 @@ const Main = () => {
                             </a>
                           </div>
                         </td>
-                        <td>${el.PriceUSD}</td>
+                        <td
+                          style={{
+                            color: getColor(index),
+                          }}
+                        >
+                          ${el.PriceUSD}
+                        </td>
                         <td>
                           <span
                             className={
