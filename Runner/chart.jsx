@@ -9,7 +9,7 @@ function chart(props) {
   const [data, setData] = useState(null);
   async function CreateCharts() {
     const id = props.data.IN;
-    const chartData = await getChart(props.data.IN, 7);
+    const chartData = await getChart(props.data.name, 7);
     setData(chartData);
   }
 
