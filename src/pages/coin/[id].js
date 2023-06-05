@@ -35,7 +35,8 @@ function Coin(props) {
           position: "relative",
         }}
       >
-        {props.token !== null ? (
+        { (    <div style={{color:"white", fontSize:"30px", fontFamily:"roboto"}}>Website is under maintenance</div>
+) return  props.token !== null ? (
           <>
             <title>{`${props.token.name} - BRC-20 Insider`}</title>
             <meta
