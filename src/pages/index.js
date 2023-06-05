@@ -5,7 +5,7 @@ import Main from "./main";
 export default function Home() {
   return (
     
-    <div>Website is under Maintainance</div>
+    <div>Website is under maintenance</div>
    
   );
 }
