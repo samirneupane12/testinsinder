@@ -26,7 +26,9 @@ export async function getServerSideProps(context) {
 }
 
 function Coin(props) {
-  return (
+  
+  return(   <div style={{color:"white", fontSize:"30px", fontFamily:"roboto"}}>Website is under maintenance</div> )
+  /*return (
     <>
       <main
         style={{
@@ -35,8 +37,8 @@ function Coin(props) {
           position: "relative",
         }}
       >
-        { (    <div style={{color:"white", fontSize:"30px", fontFamily:"roboto"}}>Website is under maintenance</div>
-) return  props.token !== null ? (
+        { 
+   props.token !== null ? (
           <>
             <title>{`${props.token.name} - BRC-20 Insider`}</title>
             <meta
@@ -90,7 +92,7 @@ function Coin(props) {
       </main>
       <Footer />
     </>
-  );
+  ); */
 }
 
 export default Coin;
