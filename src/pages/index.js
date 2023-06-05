@@ -4,9 +4,8 @@ import Main from "./main";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <Main />
-    </>
+    
+    <div>Website is under Maintainance</div>
+   
   );
 }
