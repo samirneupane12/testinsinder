@@ -27,8 +27,7 @@ export async function getServerSideProps(context) {
 
 function Coin(props) {
   
-  return(   <div style={{color:"white", fontSize:"30px", fontFamily:"roboto"}}>Website is under maintenance</div> )
-  /*return (
+  return (
     <>
       <main
         style={{
@@ -92,7 +91,7 @@ function Coin(props) {
       </main>
       <Footer />
     </>
-  ); */
+  ); 
 }
 
 export default Coin;
